@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <main role="main">
+        <button id="toggleMode" class="modo-toggle" aria-pressed="false" aria-label="Alternar modo claro e escuro">
+            🌙 Modo Escuro
+        </button>
+
+        <h1 class="typing-animation">Calculadora</h1>
+
+        <section class="display" aria-live="polite" aria-atomic="true">
+            <p class="resultado" aria-label="Resultado da calculadora"></p>
+        </section>
+
+        <section class="numeros" role="group" aria-label="Teclado da calculadora">
+            <!-- Usar botões em vez de divs para acessibilidade -->
+            <button type="button" class="numero" id="btn1" aria-label="Número 1">1</button>
+            <button type="button" class="numero" id="btn2" aria-label="Número 2">2</button>
+            <button type="button" class="numero" id="btn3" aria-label="Número 3">3</button>
+            <button type="button" class="numero" id="btnSoma" aria-label="Operador mais">+</button>
+
+            <button type="button" class="numero" id="btn4" aria-label="Número 4">4</button>
+            <button type="button" class="numero" id="btn5" aria-label="Número 5">5</button>
+            <button type="button" class="numero" id="btn6" aria-label="Número 6">6</button>
+            <button type="button" class="numero" id="btnSubtracao" aria-label="Operador menos">-</button>
+
+            <button type="button" class="numero" id="btn7" aria-label="Número 7">7</button>
+            <button type="button" class="numero" id="btn8" aria-label="Número 8">8</button>
+            <button type="button" class="numero" id="btn9" aria-label="Número 9">9</button>
+            <button type="button" class="numero" id="btnMultiplicacao" aria-label="Operador multiplicação">*</button>
+
+            <button type="button" class="numero" id="btnLimpar" aria-label="Limpar cálculo">C</button>
+            <button type="button" class="numero" id="btn0" aria-label="Número zero">0</button>
+            <button type="button" class="numero" id="btnIgual" aria-label="Igual">=</button>
+            <button type="button" class="numero" id="btnDivisao" aria-label="Operador divisão">/</button>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

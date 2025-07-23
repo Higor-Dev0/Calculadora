@@ -1,0 +1,139 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(to right, #ffe7ea, #f9c6b1, #f2a07c);
+  font-family: 'Roboto Mono', monospace;
+  color: #5a4c1e; /* marrom escuro avermelhado */
+  padding: 20px;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 50px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* Botão de toggle */
+.modo-toggle {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  background-color: #5a4c1e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.modo-toggle:hover,
+.modo-toggle:focus {
+  background-color: #01080a;
+  outline: none;
+}
+
+/* Título sem animação */
+h1.typing-animation {
+  font-family: 'Iceland', cursive;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  /* removido overflow, white-space, border-right e animação */
+}
+
+/* Display */
+.display {
+  height: 50px;
+  border-radius: 15px;
+  background-color: rgb(209, 209, 252);
+  border: 2px solid #35141f;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-family: 'Iceland', cursive;
+  user-select: none;
+}
+
+/* Grade dos botões */
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Botões */
+.numero {
+  background-color: #c9c9eb;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  color: #35141f;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  padding: 14px 0;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-family: 'Iceland', cursive;
+}
+.numero:hover,
+.numero:focus {
+  background-color: #a8a8d4;
+  outline: none;
+}
+
+/* Foco acessível */
+.numero:focus-visible {
+  outline: 3px solid #6cb8cf;
+  outline-offset: 2px;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+}
+body.dark-mode main {
+  background: #121212;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+body.dark-mode .display {
+  background-color: #1e1e1e;
+  border-color: #4caf50;
+  color: #a8ffa8;
+}
+body.dark-mode .numero {
+  background-color: #333;
+  color: #eee;
+}
+body.dark-mode .numero:hover,
+body.dark-mode .numero:focus {
+  background-color: #4caf50;
+  color: #000;
+}
+body.dark-mode .modo-toggle {
+  background-color: #4caf50;
+  color: #121212;
+}
+body.dark-mode .modo-toggle:hover,
+body.dark-mode .modo-toggle:focus {
+  background-color: #3a9e3a;
+}
